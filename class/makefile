@@ -1,2 +1,2 @@
 all:
-	@g++ virtual.cpp --include 'iostream' && ./a.out && rm a.out
+	@g++ inheritance.cpp --include 'iostream' && ./a.out && rm a.out
