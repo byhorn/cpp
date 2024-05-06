@@ -1,0 +1,13 @@
+{
+	"window.zoomLevel": 3,
+	"window.commandCenter": false,
+
+	"workbench.sideBar.location": "left",
+	"workbench.activityBar.location": "hidden",
+	"workbench.statusBar.visible": false,
+
+	"editor.fontSize": 13,
+	"editor.minimap.enabled": false,
+
+	"terminal.integrated.fontSize": 13,
+}
