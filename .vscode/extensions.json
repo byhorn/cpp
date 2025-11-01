@@ -1,0 +1,15 @@
+{
+	"recommendations": [
+		"ms-vscode.makefile-tools",
+	],
+	"unwantedRecommendations": [
+		"donjayamanne.githistory",
+		"eamodio.gitlens",
+		"davidanson.vscode-markdownlint",
+		"vscodevim.vim",
+		"github.copilot",
+		"ms-vscode.remote-explorer",
+		"ms-vscode-remote.remote-ssh",
+		"ms-vscode-remote.remote-containers"
+	]
+}

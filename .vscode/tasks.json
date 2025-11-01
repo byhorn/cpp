@@ -1,0 +1,8 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{ "label": "APPLE", "command": "echo apple", "type": "shell" },
+		{ "label": "BANAN", "command": "echo banan", "type": "shell" },
+		{ "label": "CHERY", "command": "echo chery", "type": "shell" }
+	]
+}
