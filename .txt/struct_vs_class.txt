@@ -1,0 +1,64 @@
+
+In C++, `class` and `struct` are **almost identical** in terms of functionality — both can contain:
+
+- Member variables
+- Member functions
+- Constructors/destructors
+- Access specifiers (`public`, `private`, `protected`)
+- Inheritance
+- Templates
+- Operator overloading
+
+### The **only** difference is the **default access specifier**:
+
+| Feature               | `class`                          | `struct`                          |
+|-----------------------|----------------------------------|-----------------------------------|
+| **Default access**    | `private`                        | `public`                          |
+| **Default inheritance**| `private`                        | `public`                          |
+| **Typical use**       | Encapsulation, data hiding       | Plain data aggregates (POD types) |
+
+
+
+
+When to Use Which? (Convention)**
+
+| Use `struct` when: | Use `class` when: |
+|--------------------|-------------------|
+| Representing simple data (like C structs) | Implementing objects with private data & public interface |
+| POD (Plain Old Data) types | Encapsulation is important |
+| Interfacing with C | Complex behavior, invariants |
+| Example: `struct Point { int x, y; };` | Example: `class BankAccount { private: double balance; public: void deposit(double); };` |
+
+---
+
+### 4. **They Are Interchangeable (Technically)**
+
+```cpp
+// These are functionally identical:
+class A {
+public:
+    int x;
+};
+
+struct B {
+    int x;  // public by default
+};
+```
+
+---
+
+### Summary
+
+| Aspect                   | `class`       | `struct`      |
+|--------------------------|---------------|---------------|
+| Default member access    | `private`     | `public`      |
+| Default inheritance      | `private`     | `public`      |
+| Can do everything the other can? | Yes       | Yes           |
+| **Convention**           | Encapsulation | Data containers |
+
+
+
+
+Use struct for public data (like C-style structs), use `class` for encapsulation (private data, public methods).
+
+The language treats them the same under the hood.

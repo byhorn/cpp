@@ -1,0 +1,35 @@
+
+L-values refer to expressions that have a memory location and can appear on the left side of an assignment, such as a variable.
+
+R-values are temporary values, often literal numbers or the result of a function, that only have a storage location for a short time and can only appear on the right side of an assignment.
+
+
+L-values: An expression that refers to an object that has a memory location and can persist beyond a single expression.
+
+Assignment: Can be on either the left or right side of the assignment operator (=). You can assign a value to an l-value.
+
+Examples:
+Variables: int x;
+Dereferenced pointers: *ptr
+Function names
+
+R-values
+
+    Definition: A temporary value that does not persist beyond the expression that uses it.
+    Assignment: Can only be on the right side of an assignment operator. You cannot assign a value to an r-value, and attempting to do so will result in a compiler error.
+    Examples:
+        Literal numbers: 42
+        Results of a function call: myFunction()
+
+How they relate
+
+    The key difference is permanence and addressability. L-values have a fixed, persistent location in memory, while r-values are temporary.
+    During an assignment, an r-value is assigned to an l-value. For example, in x = 100;, x is the l-value that receives the r-value 100.
+    A variable (l-value) can be converted to an r-value implicitly during operations where a temporary value is needed, such as in int y = x; where x is implicitly converted to an r-value to be assigned to y.
+
+Other value categories (C++11 and beyond)
+Beyond the basic l-value and r-value, C++ has introduced more detailed value categories for advanced features like move semantics.
+
+    prvalue: A "pure" r-value, such as a literal or the result of a function call.
+    xvalue: An "expiring" value that can be moved from.
+    glvalue: A "generalized" l-value, which is a combination of lvalues and xvalues
